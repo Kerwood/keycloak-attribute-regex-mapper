@@ -1,0 +1,14 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    volumes:
+      - ./target/user-attribute-filter.jar:/opt/keycloak/providers/user-attribute-filter.jar
+    command: start-dev
+    # Bridge mode required for using the admin portal without SSL
+    network_mode: bridge
+
