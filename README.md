@@ -11,6 +11,18 @@ The remaining values are then applied to the selected claim.
 
 ![](./images/add-mapper.png)
 
+
+## Installing
+
+To add the protocol mapper to Keycloak, download the `user-attribute-filter.jar` file from the latest release and place it in the `/opt/keycloak/providers/` directory.
+The easiest approach is to create a custom `Dockerfile` that extends the official Keycloak image, as shown in the example below.
+
+```Dockerfile
+FROM quay.io/keycloak/keycloak:26.4
+ADD https://github.com/Kerwood/keycloak-attribute-regex-mapper/releases/latest/download/user-attribute-filter.jar /opt/keycloak/providers/
+```
+Alternatively, just mount it into the running container using a volume, like in the `docker-compose.yaml` file.
+
 ## Local Development
 
 The only prerequisites for building and testing locally are [Justfile](https://github.com/casey/just) and Docker.
