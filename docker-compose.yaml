@@ -9,6 +9,6 @@ services:
     volumes:
       - ./target/user-attribute-filter.jar:/opt/keycloak/providers/user-attribute-filter.jar
     command: start-dev
-    # Bridge mode required for using the admin portal without SSL
+    # Bridge mode required for development, accessing the admin portal without SSL.
     network_mode: bridge
 
