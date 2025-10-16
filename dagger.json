@@ -1,0 +1,8 @@
+{
+  "name": "protocol-mapper",
+  "engineVersion": "v0.18.16",
+  "sdk": {
+    "source": "go"
+  },
+  "source": ".dagger"
+}
