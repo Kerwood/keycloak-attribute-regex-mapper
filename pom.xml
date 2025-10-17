@@ -6,8 +6,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>kerwood</groupId>
 	<artifactId>user-attribute-filter</artifactId> <packaging>jar</packaging>
-	<version>0.1.1</version>
-	<name>keycloak-attribute-regex-mapper</name>
+	<version>0.1.2</version>
+	<name>user-attribute-filter</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

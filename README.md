@@ -1,4 +1,4 @@
-# keycloak-attribute-regex-mapper
+# keycloak-user-attribute-filter
 A custom Keycloak protocol mapper that adds user attributes to OIDC token claims, with support for filtering values using regular expressions.
 
 Setting up a generic SAML federation in Keycloak with another identity provider has some drawbacks.
@@ -19,7 +19,7 @@ The easiest approach is to create a custom `Dockerfile` that extends the officia
 
 ```Dockerfile
 FROM quay.io/keycloak/keycloak:26.4
-ADD https://github.com/Kerwood/keycloak-attribute-regex-mapper/releases/latest/download/user-attribute-filter.jar /opt/keycloak/providers/
+ADD https://github.com/Kerwood/keycloak-user-attribute-filter/releases/latest/download/user-attribute-filter.jar /opt/keycloak/providers/
 ```
 Alternatively, just mount it into the running container using a volume, like in the `docker-compose.yaml` file.
 

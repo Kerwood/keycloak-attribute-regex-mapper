@@ -32,7 +32,7 @@ func NewGithubClient() *Github {
 	return &Github{
 		client: github.NewClient(nil),
 		owner:  "kerwood",
-		repo:   "keycloak-attribute-regex-mapper",
+		repo:   "keycloak-user-attribute-filter",
 	}
 }
 
