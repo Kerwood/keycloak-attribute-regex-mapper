@@ -11,6 +11,18 @@ The remaining values are then applied to the selected claim.
 
 ![](./images/add-mapper.png)
 
+With the attributes below configured on a user, only the Argo CD admin groups will appear in the access token.
+
+![](./images/user-attributes.png)
+
+```json
+{
+  "groups": [
+    "ACL.ArgoCD.AppAdmin",
+    "ACL.ArgoCD.ProjectAdmin"
+  ]
+}
+```
 
 ## Installing
 
